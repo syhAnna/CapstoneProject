@@ -43,7 +43,7 @@ def respond(text):
     # Generate empty target sequence of length 1.
     target_seq = np.zeros((1, 1))
     # Populate the first character of target sequence with the start character.
-    target_seq[0, 0] = target_token_index['bos']
+    target_seq[0, 0] = target_token_index['bros']    # Begin Of Sentence
     # Sampling loop for a batch of sequences
     # (to simplify, here we assume a batch of size 1).
     stop_condition = False
@@ -57,8 +57,7 @@ def respond(text):
 
         # Exit condition: either hit max length
         # or find stop character.
-        if (sampled_char == 'eos' or
-                len(decoded_sentence) > 50):
+        if (sampled_char == 'eos' or len(decoded_sentence) > 50):   # End of Sentence
             stop_condition = True
         else:
             decoded_sentence += ' ' + sampled_char

@@ -169,7 +169,7 @@ plt.show()
 
 # Save model
 root_path = '/Users/yuhan/Desktop/project/CapstoneProject/seq2seq/models'
-model.save(root_path + "/s2s.hdf5")
+# model.save(root_path + "/s2s.hdf5")
 
 """
 Construct encoder model
@@ -198,5 +198,5 @@ reverse_target_char_index = dict(
 
 # save the model
 root_path = '/Users/yuhan/Desktop/project/CapstoneProject/seq2seq/models'
-encoder_model.save(root_path + "/encoder_model.hdf5")
-decoder_model.save(root_path + "/decoder_model.hdf5")
+# encoder_model.save(root_path + "/encoder_model.hdf5")
+# decoder_model.save(root_path + "/decoder_model.hdf5")
