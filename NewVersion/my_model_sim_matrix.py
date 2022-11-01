@@ -1,4 +1,5 @@
 import numpy as np
+import pandas as pd
 from tqdm import tqdm
 from annoy import AnnoyIndex
 from utils import MODEL_ROOT, loadData, saveData
@@ -50,5 +51,9 @@ if __name__ == '__main__':
     target_sim_matrix = sim_matrix(target_texts, MODEL_ROOT + fname2)
     saveData(input_sim_matrix, MODEL_ROOT + '/input_sim_matrix.pickle')
     saveData(target_sim_matrix, MODEL_ROOT + '/target_sim_matrix.pickle')
+    input_sim_df = pd.DataFrame(input_sim_matrix, columns=range(input_sim_matrix.shape[1]))
+    target_sim_df = pd.DataFrame(target_sim_matrix, columns=range(target_sim_matrix.shape[1]))
+    saveData(input_sim_df, MODEL_ROOT + '/input_sim_matrix.csv')
+    saveData(target_sim_df, MODEL_ROOT + '/target_sim_matrix.csv')
     print(input_sim_matrix)
     print(target_sim_matrix)
