@@ -1,5 +1,5 @@
-# CapstoneProject: 
-UCLA Master Degree Capstone Project
+# CapstoneProject: Automation System for Email Response
+## UCLA Master Degree Capstone Project (Fall 2022)
 
 Google Drive link for large data files that cannot be uploaded: https://drive.google.com/drive/folders/19sByFpcVTjR-kuzpwOMMMLZVITVhdFkJ?usp=share_link
 
@@ -8,19 +8,19 @@ Google Drive link for large data files that cannot be uploaded: https://drive.go
     ├── DataPreproDataPreprocess+NewModelDraft.ipynb                    # Jupyter file contains data processing and tarined new model         
     │
     ├── util files
-    │   ├── utils.py                                                    # Helper functions for both 
-    │   ├── preprocess.py
-    │   ├── vectorization.py
-    │   └── smart_reply.py
+    │   ├── utils.py                                                    # Helper functions for both baseline model and new model
+    │   ├── preprocess.py                                               # Clean and process both baseline and new model's raw data
+    │   ├── vectorization.py                                            # Vectorize the cleaned data
+    │   └── smart_reply.py                                              # The SmartReply class that can display the new model result
     │
     ├── model                  
     │   ├── Baseline model             
-    │   │   ├── baseline_enc_dec.py
-    │   │   ├── baseline_model.py
-    │   │   └── baseline_inference.py
+    │   │   ├── baseline_enc_dec.py                                     # Encoder and Decoder classes
+    │   │   ├── baseline_model.py                                       # Construct and train the baseline LSTM model
+    │   │   └── baseline_inference.py                                   # Model inference of trained baseline model
     │   │    
     │   └── New model
-    │       ├── my_model_sim_matrix.py
+    │       ├── my_model_sim_matrix.py                                  # 
     │       ├── my_model_clustering.py
     │       ├── my_model.py
     │       └── my_model_inference.py
@@ -50,35 +50,32 @@ Google Drive link for large data files that cannot be uploaded: https://drive.go
 
 
 ### Requirements:
-* Files 'data_generation.py' and 'data_preprocessing.py' need to be run on IBM virtial machine with SROM installed
-    * IBM Virtual Machine Setup Instruction: VM_setup.md
-    * SROM Installation Instruction: srom_installation.md
-* Files 'datase_ppl_model.ipynb' and 'ppl_instance_model.ipynb' need to be run on Colab
-* Files 'visualization.ipynb' need to be run on IBM Watson Studio
+* Run 'smart_reply.py' file to play with trained new model
+    * In order to run  
+    * ...
+Example: 
 
 
 ## Data 
-* Data Generation
-    *  For each dataset run SROM to generate best set of pipelines
-    *  Rerun the set of generated pipelines on the test dataset, record the predictions as {0, 1} = {True prediction, False prediction}
+* Raw Data
+    * (Baseline: 'single_qna.csv') Amazon Question/Answer Dataset: https://www.kaggle.com/datasets/praneshmukhopadhyay/amazon-questionanswer-dataset
+    * (New model: 'topical_chat.csv') Chatbot Dataset Topical Chat: https://www.kaggle.com/datasets/arnavsharmaas/chatbot-dataset-topical-chat
 * Data Preprocessing
-    *  Use generated raw data to construct 3D tensors
-* Data Analysis
-    *  Visualize data use PCA, NMF, TSNE, etc.
-    *  Visualize factors use histogram
+    *  Data cleaning: extend the abbreviation; remove html, number, emoji, punctuations; transfer all uppercase to lowercase
+    *  Munipulate the columns (add / remove), remove the rows have NaN values
+* Data Manipulation
+    *  Data tokenization, vectorization
+    *  Baseline: GloVe (300-dimensional) - glove.6B.300d.txt
+    *  New model: use Annoy (Approximate Nearest Neighbors Oh Yeah) to contruct input and target similarity matrices
 
 ## Model Construction
-* Fastai Collaborative Filtering
-    *  One dataset case: add regularization & instance similarity
-    *  Multiple datasets case: add regularization & dataset similarity
+* Baseline model:
+* New model:
+
 
 ## Techniques
-* Dataset space: Penn Machine Learning Benchmarks
-* Data generation: SROM (AutoClassification)
-* Model: Fastai Collaborative Filtering
-* Matrix Factorization: PCA, NMF
-* Similarity measurement:
-    * One dataset: cosine similarity, Euclidean distance
-    * Multiple datasets: Canonical Correlation Analysis (CCA) score
-* Data visualization: Clustering (TSNE, Dendrogram), Histogram, Linear Regression, Decis
+* Raw Data:
+* COnstruct similarity 
+* Model:
+
 
