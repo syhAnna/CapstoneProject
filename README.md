@@ -59,8 +59,9 @@ Google Drive link for large data files that cannot be uploaded: https://drive.go
 * Run 'smart_reply.py' file to play with trained new model, in order to run successfully, pass the required file paths in 'my_model_inference.py':
     * let DBSCAN_FNAME = path to file 'target_dbscan_0008.pickle'
     * let MODEL_FNAME = path to file 'my_lstm_model_0008.hdf5'
-#### Sample <Terminal Output>: ![alt text](https://github.com/syhAnna/CapstoneProject/blob/main/imgs/sample.png?raw=true)
-#### Sample <Web App Display>: ![alt text](https://github.com/syhAnna/CapstoneProject/blob/main/imgs/webap_sample.png?raw=true)
+
+#### Sample (Terminal Output): ![alt text](https://github.com/syhAnna/CapstoneProject/blob/main/imgs/sample.png?raw=true)
+#### Sample (Web App Display): ![alt text](https://github.com/syhAnna/CapstoneProject/blob/main/imgs/webap_sample.png?raw=true)
 
 
 ## Data 
