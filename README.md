@@ -1,4 +1,4 @@
-# Capston eProject: Automation System for Email Response
+# Capstone Project: Automation System for Email Response
 ## UCLA Master's Degree Capstone Project (Fall 2022)
 
 Google Drive link for large data files that cannot be uploaded: https://drive.google.com/drive/folders/19sByFpcVTjR-kuzpwOMMMLZVITVhdFkJ?usp=share_link
