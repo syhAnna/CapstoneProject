@@ -5,7 +5,13 @@ Google Drive link for large data files that cannot be uploaded: https://drive.go
 
 ### Directory Detail:
     .
+    ├── requirements.txt                                                  # Project environment requirements file        
+    │
     ├── DataPreproDataPreprocess+NewModelDraft.ipynb                      # Jupyter file contains data processing and tarined new model         
+    │
+    ├── Web application   
+    │   ├── app.py                                                        # Smart Reply Suggestion Web application (new model)
+    │   └── templates/index.html                                          # Web template html file 
     │
     ├── util files
     │   ├── utils.py                                                      # Helper functions for both baseline model and new model
@@ -49,10 +55,12 @@ Google Drive link for large data files that cannot be uploaded: https://drive.go
 
 
 ### Requirements:
+* Run 'app.py' to display the Smart Reply Suggestion new model web application, requires to change the data file path in 'my_model_inference.py' to absolute path
 * Run 'smart_reply.py' file to play with trained new model, in order to run successfully, pass the required file paths in 'my_model_inference.py':
     * let DBSCAN_FNAME = path to file 'target_dbscan_0008.pickle'
     * let MODEL_FNAME = path to file 'my_lstm_model_0008.hdf5'
-#### Sample: ![alt text](https://github.com/syhAnna/CapstoneProject/blob/main/imgs/sample.png?raw=true)
+#### Sample <Terminal Output>: ![alt text](https://github.com/syhAnna/CapstoneProject/blob/main/imgs/sample.png?raw=true)
+#### Sample <Web App Display>: ![alt text](https://github.com/syhAnna/CapstoneProject/blob/main/imgs/webap_sample.png?raw=true)
 
 
 ## Data 
@@ -78,6 +86,7 @@ Google Drive link for large data files that cannot be uploaded: https://drive.go
 * New model: Annoy similarity distance measurement technique, DBSCAN clustering, keras LSTM model
 
 Research paper link:
+
 PPT link: 
 
 
