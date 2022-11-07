@@ -55,9 +55,9 @@ Google Drive link for large data files that cannot be uploaded: https://drive.go
             └── my_lstm_model_0008.hdf5                                   # File contained trained new model object
 
 
-## Getting Started
+## Getting Started:
 The instructions of running the project on your local machine. Install Python 3.10 on your machine.
-### Setting up the project
+### Setting up the project:
 * Clone the repository:
 ```
 git clone https://github.com/syhAnna/CapstoneProject.git
@@ -70,7 +70,7 @@ cd CapstoneProject
 ```
 pip install -r requirements.txt
 ```
-### Usage
+### Usage:
 * Run new model in terminal (sample output is on the left side of image below):
 ```
 python3 smart_reply.py
@@ -91,7 +91,7 @@ Then, point your browser to http://localhost:5000/ (http://127.0.0.1:5000/)
     * let MODEL_FNAME = path to file 'my_lstm_model_0008.hdf5'
 
 
-## Data 
+## Data: 
 * Raw Data
     * (Baseline: 'single_qna.csv') Amazon Question/Answer Dataset: https://www.kaggle.com/datasets/praneshmukhopadhyay/amazon-questionanswer-dataset
     * (New model: 'topical_chat.csv') Chatbot Dataset Topical Chat: https://www.kaggle.com/datasets/arnavsharmaas/chatbot-dataset-topical-chat
@@ -104,12 +104,12 @@ Then, point your browser to http://localhost:5000/ (http://127.0.0.1:5000/)
     *  New model: use Annoy (Approximate Nearest Neighbors Oh Yeah) to contruct input and target similarity matrices
 
 
-## Model Construction
+## Model Construction:
 * Baseline model: LSTM + Beam Search
 * New model: Similarity Distance (Annoy) + DBSCAN clustering + LSTM
 
 
-## Techniques
+## Techniques:
 * Baseline model: keras LSTM model, BLEU score measurement, GloVe pretrained word embeddings
 * New model: Annoy similarity distance measurement technique, DBSCAN clustering, keras LSTM model
 
