@@ -3,7 +3,8 @@
 
 Google Drive link for large data files that cannot be uploaded: https://drive.google.com/drive/folders/19sByFpcVTjR-kuzpwOMMMLZVITVhdFkJ?usp=share_link
 
-### Directory Detail:
+
+## Directory Detail:
     .
     ├── requirements.txt                                                  # Project environment requirements file        
     │
@@ -54,13 +55,38 @@ Google Drive link for large data files that cannot be uploaded: https://drive.go
             └── my_lstm_model_0008.hdf5                                   # File contained trained new model object
 
 
-### Requirements:
-* Run 'app.py' to display the Smart Reply Suggestion new model web application, requires to change the data file path in 'my_model_inference.py' to absolute path
+## Getting Started
+The instructions of running the project on your local machine. Install Python 3.10 on your machine.
+### Setting up the project
+* Clone the repository:
+```
+git clone https://github.com/syhAnna/CapstoneProject.git
+```
+* Navigate to the repository
+```
+cd CapstoneProject
+```
+* Install the requirments.txt using:
+```
+pip install -r requirements.txt
+```
+* Run new model in terminal (sample output is on the left side of image below):
+```
+python3 smart_reply.py
+```
+* Run new model Web Application (sample output is on the right side of image below):
+```
+python3 app.py
+```
+Then, point your browser to http://localhost:5000/ (http://127.0.0.1:5000/)
+### Sample (Terminal Output & Web App Display): ![alt text](https://github.com/syhAnna/CapstoneProject/blob/main/imgs/sample_web.png?raw=true)
+
+
+## Requirements:
+* Download the large files in Google Drive (https://drive.google.com/drive/folders/19sByFpcVTjR-kuzpwOMMMLZVITVhdFkJ?usp=share_link) into the correspond directories in this depository
 * Run 'smart_reply.py' file to play with trained new model, in order to run successfully, pass the required file paths in 'my_model_inference.py':
     * let DBSCAN_FNAME = path to file 'target_dbscan_0008.pickle'
     * let MODEL_FNAME = path to file 'my_lstm_model_0008.hdf5'
-
-#### Sample (Terminal Output & Web App Display): ![alt text](https://github.com/syhAnna/CapstoneProject/blob/main/imgs/sample_web.png?raw=true)
 
 
 ## Data 
