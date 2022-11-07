@@ -70,6 +70,7 @@ cd CapstoneProject
 ```
 pip install -r requirements.txt
 ```
+### Usage
 * Run new model in terminal (sample output is on the left side of image below):
 ```
 python3 smart_reply.py
@@ -79,7 +80,8 @@ python3 smart_reply.py
 python3 app.py
 ```
 Then, point your browser to http://localhost:5000/ (http://127.0.0.1:5000/)
-### Sample (Terminal Output & Web App Display): ![alt text](https://github.com/syhAnna/CapstoneProject/blob/main/imgs/sample_web.png?raw=true)
+### Preview (Terminal Output & Web App Display): 
+![alt text](https://github.com/syhAnna/CapstoneProject/blob/main/imgs/sample_web.png?raw=true)
 
 
 ## Requirements:
