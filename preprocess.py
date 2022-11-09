@@ -79,8 +79,7 @@ def vectorization(df):
         input_text = df.iloc[conversation_index - 1]
         target_text = df.iloc[conversation_index]
         if input_text.conversation_id == target_text.conversation_id:
-            input_text = input_text.message
-            target_text = target_text.message
+            input_text, target_text = str(input_text.message), str(target_text.message)
             if input_text and target_text \
                     and len(input_text.split()) in range(3, INPUT_LENGTH) \
                     and len(target_text.split()) in range(1, TARGET_LENGTH):
