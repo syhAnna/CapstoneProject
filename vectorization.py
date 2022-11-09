@@ -51,7 +51,10 @@ saveData(dec_test, BASELINE_ROOT + '/dec_test.pickle')
 # Vectorize model data #
 ########################
 input_tokenizer, target_tokenizer = get_tokenizer(input_texts), get_tokenizer(target_texts)
-input_maxlen, target_maxlen = max([len(x) for x in input_texts]), max([len(x) for x in target_texts])
+input_tokens, target_tokens = input_tokenizer.texts_to_sequences(input_texts), \
+                              target_tokenizer.texts_to_sequences(target_texts)
+input_maxlen, target_maxlen = max([len(x) for x in input_tokens]), \
+                              max([len(x) for x in target_tokens])
 input_sequences = encode_pad_seq(input_tokenizer, input_maxlen, input_texts)
 target_sequences = encode_pad_seq(target_tokenizer, target_maxlen, target_texts)
 
