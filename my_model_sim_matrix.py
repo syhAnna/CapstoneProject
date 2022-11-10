@@ -24,7 +24,6 @@ def sim_matrix(texts, sequences, annoy_fname):
     """
     Construct similarity matrix through annoy
     """
-
     texts_len, max_input_len = len(texts), max([len(x) for x in sequences])
     sim_mat = (-1) * np.ones((texts_len, texts_len))
     annoy = AnnoyIndex(max_input_len, 'angular')
