@@ -6,6 +6,8 @@ Google Drive link for large data files that cannot be uploaded: https://drive.go
 
 ## Directory Detail:
     .
+    ├── CapstoneReport.pdf, CapstonePPT.pdf                               # Project report paper and PPT        
+    │
     ├── requirements.txt                                                  # Project environment requirements file        
     │
     ├── DataPreproDataPreprocess+NewModelDraft.ipynb                      # Jupyter file contains data processing and tarined new model         
