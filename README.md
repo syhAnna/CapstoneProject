@@ -113,7 +113,7 @@ Then, point your browser to http://localhost:5000/ (http://127.0.0.1:5000/)
 * Baseline model: keras LSTM model, BLEU score measurement, GloVe pretrained word embeddings
 * New model: Annoy similarity distance measurement technique, DBSCAN clustering, keras LSTM model
 
-Research paper link:
+Research paper link: https://drive.google.com/file/d/1zEl4Mp4Am_b7rAnX9mn27nrdWeSWWMxA/view?usp=share_link
 
 PPT link: https://drive.google.com/file/d/1OCfDZdY8Oduq3OwGdU2ztc4frVGo1z_R/view?usp=share_link 
 
